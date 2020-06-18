@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_agent_init"
+                    android:text="init"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/main_btn_agent_unregister"
+                    android:text="unregister"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/main_btn_agent_reset"
+                    android:text="reset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_kws_init"
+                    android:text="kws_init"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/main_btn_kws_reset"
+                    android:text="kws_reset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/main_btn_agent_debugmod"
+                    android:text="debugmod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_kws_getVersion"
+                    android:text="kws_getVersion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/main_btn_kws_getKeyword"
+                    android:text="kws_getKeyword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_kws_1"
+                    android:text="기가지니"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/main_btn_kws_2"
+                    android:text="지니야"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/main_btn_kws_3"
+                    android:text="친구야"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/main_btn_kws_4"
+                    android:text="자기야"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_agent_startvoice"
+                    android:text="startvoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+                    <ProgressBar
+                        android:id="@+id/main_progress_voice"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressDrawable="@drawable/progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/main_btn_agent_stopvoice"
+                    android:text="stopvoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_agent_sendtext1"
+                    android:text="sendtext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <EditText
+                    android:id="@+id/main_edit_sendtext1"
+                    android:text="음악 틀어줘"
+                    android:textSize="13sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf" android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_agent_texttovoice"
+                    android:text="getTTS"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <EditText
+                    android:id="@+id/main_edit_texttovoice"
+                    android:text="안녕하세요"
+                    android:textSize="13sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp">
+                        <TextView
+                            android:id="@+id/main_text_artist_subject"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="marquee"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp">
+                        <ImageView
+                            android:id="@+id/main_img_prev"
+                            android:src="@drawable/btn_prev"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <View android:layout_width="12dp" android:layout_height="match_parent"/>
+                        <ImageView
+                            android:id="@+id/main_img_play_pause"
+                            android:src="@drawable/btn_play"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <View android:layout_width="12dp" android:layout_height="match_parent"/>
+                        <ImageView
+                            android:id="@+id/main_img_next"
+                            android:src="@drawable/btn_next"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <View android:layout_width="12dp" android:layout_height="match_parent"/>
+                        <ImageView
+                            android:id="@+id/main_img_volume_down"
+                            android:src="@drawable/btn_volume_down"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <View android:layout_width="12dp" android:layout_height="match_parent"/>
+                        <ImageView
+                            android:id="@+id/main_img_volume_up"
+                            android:src="@drawable/btn_volume_up"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <ProgressBar
+                        android:id="@+id/main_progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:progressDrawable="@drawable/progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <Button
+                    android:id="@+id/main_btn_agent_serviceLogin"
+                    android:text="serviceLogin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/main_btn_agent_setServerInfo"
+                    android:text="setServerInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <Button
+                    android:id="@+id/main_btn_agent_serviceLoginStatus"
+                    android:text="serviceLoginStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/main_btn_agent_serviceLogout"
+                    android:text="serviceLogout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <Button
+                    android:id="@+id/main_btn_agent_getVersion"
+                    android:text="getVersion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <Button
+                    android:id="@+id/main_btn_agent_setLocation"
+                    android:text="setLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/main_btn_clear_log"
+                    android:text="clearlog"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#dfdfdf"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/box">
+                        <TextView
+                            android:id="@+id/main_text_request"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:padding="4dp"
+                            android:scrollbars="vertical"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/box">
+                        <TextView
+                            android:id="@+id/main_text_response"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:padding="4dp"
+                            android:scrollbars="vertical"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:background="#ffffff">
+                            <TextView
+                                android:text="Request"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:background="#ffffff">
+                            <TextView
+                                android:text="Response"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+        <include layout="@layout/partial_set_server_info"/>
+        <include layout="@layout/partial_set_location"/>
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

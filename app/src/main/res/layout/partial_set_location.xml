@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/partial_set_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone"
+    android:background="#BF000000"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/xml_b0_r5_white_layout">
+        <EditText
+            android:id="@+id/partial_set_location_1"
+            android:text="127.0301"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="경도 : 127.0301"/>
+        <EditText
+            android:id="@+id/partial_set_location_2"
+            android:text="37.4722"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="위도 : 37.4722"/>
+        <EditText
+            android:id="@+id/partial_set_location_3"
+            android:text="서울특별시 서초구 우면동"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="주소 : 서울특별시 서초구 우면동"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/partial_set_location_cancel"
+                android:text="취소"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/partial_set_location_confirm"
+                android:text="확인"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
