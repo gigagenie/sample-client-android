@@ -9,15 +9,14 @@ GiGA Genie Inside(이하, G-INSIDE)는 3rd party 개발자가 자신들의 제�
 '기가지니'를 올려서 음성인식과 자연어로 제어하고 기가지니가 제공하는 서비스(생활비서, 뮤직, 라디오 등)를 사용할 수 있도록 해줍니다.
 G-INSIDE는 기가지니가 탑재된 제품을 개발자들이 쉽게 만들 수 있도록 개발 도구와 문서, 샘플 소스 등 개발에 필요한 리소스를 제공합니다.
 
-# Prerequisites
+## Prerequisites
+* Build Tool: [Android Studio](https://developer.android.com/studio) (3.4.1 또는 이후 버전 권장)
+* [G-INSIDE Android Device SDK](https://github.com/gigagenie/ginside-sdk/tree/master/g-sdk-android)
 
 ## 인사이드 디바이스 키 발급
   1. [API Link](https://apilink.kt.co.kr) 에서 회원가입 
   2. 사업 제휴 신청 및 디바이스 등록 (Console > GiGA Genie > 인사이드 디바이스 등록)
   3. 디바이스 등록 완료 후 My Device에서 등록한 디바이스 정보 및 개발키 발급 확인 (Console > GiGA Genie > My Device)
-
-## 개발 환경
-*   Build Tool: Android Studio (3.4.1 또는 이후 버전 권장)
 
 ## Android용 Sample 빌드
 - Android Studio에서 Sample Project를 Open한다.
@@ -30,6 +29,6 @@ G-INSIDE는 기가지니가 탑재된 제품을 개발자들이 쉽게 만들 �
     ```
 - 타이머 기능을 사용하려면 알람에 사용할 미디어 파일을 app/src/main/assets 에 추가 후 MyMediaPlayer의 YOUR-BELL.mp3을 실제 파일 리소스로 변경한다.
 
-# License
+## License
 
 sample-client-android is licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
