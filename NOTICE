@@ -1,0 +1,12 @@
+DISCLAIMER NOTICE
+
+- 본 샘플 소스는 GiGA Genie INSIDE(이하, G-INSIDE)를 적용하여 개발하고자 하는 개발자를 위해
+  G-INSIDE의 동작 구조를 이해하고 G-INSIDE SDK 또는 API를 이용하여 Application을
+  개발하는데 도움을 드리는 목적으로 제공되는 것입니다.
+
+- 본 샘플 소스를 활용하여 Application을 개발하는 것에 대한 제한은 없으나 상용 목적의 서비스 제공을
+  위해서는 샘플 소스가 완벽한 것이 아님을 이해하고, 각 Application 서비스 사니리오에 따라
+  개발되어야 합니다.
+
+- 본 샘플 소스는 GiGA Genie INSIDE의 기본 동작 확인을 위한 목적 외에 이 샘플 소스를 이용하여
+  개발된 3rd party Application에 대한 어떠한 보증을 제공하거나 책임을 부담하지 않습니다.
