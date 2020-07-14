@@ -26,6 +26,7 @@ import android.media.AudioManager;
 import android.media.AudioRecord;
 import android.media.AudioTrack;
 import android.media.MediaRecorder;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -405,7 +406,7 @@ public class MainActivity extends AppCompatActivity implements InsideListener, V
                         break;
                     case "webview_url":
                         // 전달받은 URL을 디바이스의 브라우저로 실행
-                        startActivity(makeWebViewIntent(payload.cmdOpt.oauth_url));
+                        startActivity(makeWebbrowserIntent(payload.cmdOpt.oauth_url));
                         break;
                     case "control_hardware":
                         // 전달받은 정보로 HW 제어 (볼륨 제어, 음소거 등)
@@ -611,7 +612,7 @@ public class MainActivity extends AppCompatActivity implements InsideListener, V
             int rc = jsonObject.getInt("rc");
             String rcmsg = jsonObject.getString("rcmsg");
             if(rc == 200)
-                startActivity(makeWebViewIntent(jsonObject.getString("oauth_url")));
+                startActivity(makeWebbrowserIntent(jsonObject.getString("oauth_url")));
             else
                 runOnUiThread(() -> utils.setToast(TAG + " serviceLogin Fail : " + rc + ", " + rcmsg));
             Logger.i(TAG + " serviceLogin ret : " + ret);
@@ -659,6 +660,15 @@ public class MainActivity extends AppCompatActivity implements InsideListener, V
     private Intent makeWebViewIntent(String targetUrl) {
         Intent intent = new Intent(this, WebViewActivity.class);
         intent.putExtra("url", targetUrl);
+        return intent;
+    }
+    /**
+     * make webbrowser intent (chrome)
+     * **/
+    private Intent makeWebbrowserIntent(String targetUrl) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(targetUrl));
+        intent.setPackage("com.android.chrome");
+        startActivity(intent);
         return intent;
     }
     /**
