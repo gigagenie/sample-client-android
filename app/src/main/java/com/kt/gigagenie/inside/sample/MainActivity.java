@@ -1276,6 +1276,12 @@ public class MainActivity extends AppCompatActivity implements InsideListener, V
                 recorder = new AudioRecord(MediaRecorder.AudioSource.MIC, 16000,
                         AudioFormat.CHANNEL_IN_MONO,
                         AudioFormat.ENCODING_PCM_16BIT, N * 16);
+
+
+                Logger.d("AudioRecord recorder.getState = "+recorder.getState());
+                Logger.d("AudioRecord STATE_INITIALIZED value  = "+AudioRecord.STATE_INITIALIZED);
+
+
                 recorder.startRecording();
 
                 while (!stop) {
