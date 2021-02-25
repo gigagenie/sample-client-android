@@ -1333,7 +1333,7 @@ public class MainActivity extends AppCompatActivity implements InsideListener, V
     //getTTS로 전달받은 mediastream 재생
     private void RawPlayer(byte[] raw, boolean useMediaStatus) {
 
-        int mSampleRate = 16000;
+        int mSampleRate = 24000;
         int mChannelCount = AudioFormat.CHANNEL_CONFIGURATION_MONO;
         int mAudioFormat = AudioFormat.ENCODING_PCM_16BIT;
         int mBufferSize = AudioTrack.getMinBufferSize(mSampleRate, mChannelCount, mAudioFormat);
