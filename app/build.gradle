@@ -86,7 +86,4 @@ dependencies {
         exclude group: 'stax', module: 'stax-api'
         exclude group: 'stax', module: 'stax'
     }
-
-    //implementation files("libs/g-sdk-android_0.9.1beta.aar")
-    //implementation files("libs/kwsrnet-release.aar")
 }
