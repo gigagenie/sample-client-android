@@ -25,25 +25,31 @@ android {
 }
 
 protobuf {
-    protoc { artifact = 'com.google.protobuf:protoc:3.7.1' }
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.12.0"
+    }
     plugins {
-        javalite { artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0" }
         grpc {
-            artifact = 'io.grpc:protoc-gen-grpc-java:1.11.0' // CURRENT_GRPC_VERSION
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.38.0'
         }
     }
-
     generateProtoTasks {
         all().each { task ->
+            task.builtins {
+                java {
+                    option 'lite'
+                }
+            }
             task.plugins {
-                javalite {}
-                grpc { // Options added to --grpc_out
+                grpc {
+                    // Options added to --grpc_out
                     option 'lite'
                 }
             }
         }
     }
 }
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation fileTree(dir: 'libs', include: ['*.aar'])
@@ -67,10 +73,10 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 
     // grpc
-    implementation 'io.grpc:grpc-okhttp:1.11.0'
-    implementation 'io.grpc:grpc-protobuf-lite:1.11.0'
-    protobuf 'com.google.protobuf:protobuf-java:3.7.1'
-    implementation 'io.grpc:grpc-stub:1.11.0'
+    implementation 'io.grpc:grpc-okhttp:1.38.0'
+    implementation 'io.grpc:grpc-protobuf-lite:1.38.0'
+    protobuf 'com.google.protobuf:protobuf-java:3.12.0'
+    implementation 'io.grpc:grpc-stub:1.38.0'
     implementation 'javax.annotation:javax.annotation-api:1.2'
     // Networking.
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
