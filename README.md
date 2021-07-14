@@ -20,7 +20,7 @@ G-INSIDE는 기가지니가 탑재된 제품을 개발자들이 쉽게 만들 �
 
 ## Android용 Sample 빌드
 - Android Studio에서 Sample Project를 Open한다.
-- Sample Project에는 Android Device SDK 1.1.0버전(g-sdk-android_1.1.0.aar)이 탑재되어 있으며, 필요시 app/libs 경로의 라이브러리 파일을 변경하여 사용할 수 있다.
+- Sample Project에는 Android Device SDK 1.4.1버전(g-sdk-android_1.4.1.aar)이 탑재되어 있으며, 필요시 app/libs 경로의 라이브러리 파일을 변경하여 사용할 수 있다.
 - Application 실행 전 인사이드 디바이스 키를 설정한다. MainActivity의 아래 내용을 실제 발급받은 키값으로 입력하여 빌드한다.
     ```
     YOUR-CLIENT-ID
