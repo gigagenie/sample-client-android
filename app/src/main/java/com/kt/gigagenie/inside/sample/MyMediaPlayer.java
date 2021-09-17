@@ -432,7 +432,7 @@ public class MyMediaPlayer {
     //임시 wav file write
     private String base64StringToFile(String base64AudioData) {
 
-        String fullPath = Environment.getExternalStorageDirectory() + "/mediastream.wav";
+        String fullPath = insideSDK.mContext.getFilesDir().getAbsolutePath()+"/mediastream.wav";
 
         byte[] decoded = Base64.decode(base64AudioData,1);
         //Logger.i("Decoded: ", Arrays.toString(decoded));
