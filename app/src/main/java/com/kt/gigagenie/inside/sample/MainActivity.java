@@ -182,7 +182,11 @@ public class MainActivity extends AppCompatActivity implements InsideListener, V
         }
 
         try {
-            String ret = insideSDK.agent_register(CLIENT_ID, CLIENT_KEY, CLIENT_SECRET, null);
+            //사용자 식별 ID로 android_id 사용
+            String android_id = Settings.Secure.getString(this.getContentResolver(),Settings.Secure.ANDROID_ID);
+            Logger.d(TAG + " registerInsideSDK user_id(android_id) : " + android_id);
+            
+            String ret = insideSDK.agent_register(CLIENT_ID, CLIENT_KEY, CLIENT_SECRET, android_id);
             Logger.d(TAG + " registerInsideSDK agent_register ret : " + ret);
 
             JSONObject jsonObject = new JSONObject(ret);
