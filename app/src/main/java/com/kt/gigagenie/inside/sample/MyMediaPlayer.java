@@ -23,8 +23,8 @@ import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.media.MediaPlayer;
 import android.os.Build;
-import android.os.Environment;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 import android.util.Base64;
 
 import com.kt.gigagenie.inside.api.Inside;
