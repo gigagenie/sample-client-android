@@ -29,7 +29,7 @@ import com.kt.gigagenie.inside.util.Logger;
 
 public class VoiceRecorder {
 
-    private static final int[] SAMPLE_RATE_CANDIDATES = new int[]{16000, 11025, 22050, 44100};
+    //private static final int[] SAMPLE_RATE_CANDIDATES = new int[]{16000, 11025, 22050, 44100};
 
     private static final int CHANNEL = AudioFormat.CHANNEL_IN_MONO;
     private static final int ENCODING = AudioFormat.ENCODING_PCM_16BIT;
@@ -130,22 +130,18 @@ public class VoiceRecorder {
             mAudioRecord.release();
             return mAudioRecord;
         }
-        for (int sampleRate : SAMPLE_RATE_CANDIDATES) {
-            final int sizeInBytes = AudioRecord.getMinBufferSize(sampleRate, CHANNEL, ENCODING);
-            if (sizeInBytes == AudioRecord.ERROR_BAD_VALUE) {
-                continue;
-            }
-            final AudioRecord audioRecord = new AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION,
-                    sampleRate, CHANNEL, ENCODING, sizeInBytes);
-            Log.d("DEBUG", "sampleRate: " + sampleRate);
-            if (audioRecord.getState() == AudioRecord.STATE_INITIALIZED) {
-                Log.d("DEBUG", "createAudioRecord : STATE_INITIALIZED");
-                mBuffer = new short[sizeInBytes];
-                return audioRecord;
-            } else {
-                Log.d("DEBUG", "createAudioRecord : else");
-                audioRecord.release();
-            }
+        int sampleRate = 16000;
+        final int sizeInBytes = 1280;
+        final AudioRecord audioRecord = new AudioRecord(MediaRecorder.AudioSource.VOICE_RECOGNITION,
+                sampleRate, CHANNEL, ENCODING, sizeInBytes);
+        Log.d("DEBUG", "sampleRate: " + sampleRate);
+        if (audioRecord.getState() == AudioRecord.STATE_INITIALIZED) {
+            Log.d("DEBUG", "createAudioRecord : STATE_INITIALIZED");
+            mBuffer = new short[sizeInBytes];
+            return audioRecord;
+        } else {
+            Log.d("DEBUG", "createAudioRecord : else");
+            audioRecord.release();
         }
         return null;
     }
