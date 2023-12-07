@@ -50,30 +50,12 @@ public class WebViewActivity extends AppCompatActivity {
             }
         });
         WebSettings settings = webView.getSettings();
-        settings.setAppCacheEnabled(false);
         settings.setJavaScriptEnabled(true);
         settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
         webView.clearCache(true);
         webView.clearHistory();
-        clearCookies(this);
         webView.loadUrl(url);
     }
 
-    @SuppressWarnings("deprecation")
-    public static void clearCookies(Context context)
-    {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
-            CookieManager.getInstance().removeAllCookies(null);
-            CookieManager.getInstance().flush();
-        } else {
-            CookieSyncManager cookieSyncMngr=CookieSyncManager.createInstance(context);
-            cookieSyncMngr.startSync();
-            CookieManager cookieManager=CookieManager.getInstance();
-            cookieManager.removeAllCookie();
-            cookieManager.removeSessionCookie();
-            cookieSyncMngr.stopSync();
-            cookieSyncMngr.sync();
-        }
-    }
 }
